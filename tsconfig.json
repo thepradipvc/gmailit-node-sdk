@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    /* Base Options: */
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "es2022",
-    // "verbatimModuleSyntax": true,
-    "allowJs": true,
-    // "resolveJsonModule": true,
-    "moduleDetection": "force",
-    /* Strictness */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    /* If NOT transpiling with TypeScript: */
-    // "moduleResolution": "Bundler",
-    "module": "CommonJS",
-    "noEmit": true,
-  }
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "build",
+    "strict": true
+  },
+  "include": ["src"]
 }

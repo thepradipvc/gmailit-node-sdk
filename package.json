@@ -1,10 +1,13 @@
 {
   "name": "gmailit",
-  "license": "MIT",
   "version": "0.0.1",
+  "description": "Node.js library for the Gmailit API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "dev": "vitest",
     "test": "vitest run",
@@ -13,10 +16,25 @@
     "ci": "pnpm run lint && pnpm run test && pnpm run build",
     "release": "pnpm run ci && changeset publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thepradipvc/gmailit-node-sdk"
+  },
+  "author": "Pradip Chaudhary",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thepradipvc/gmailit-node-sdk/issues"
+  },
+  "homepage": "https://github.com/thepradipvc/gmailit-node-sdk#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.2.74",
     "tsup": "^6.7.0",
     "typescript": "^4.9.5",
     "vitest": "^1.3.1"
+  },
+  "dependencies": {
+    "@react-email/render": "^0.0.12"
   }
 }

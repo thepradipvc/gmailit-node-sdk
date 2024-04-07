@@ -1,3 +1,2 @@
-export const hello = () => {
-  return "Hello Gmailit user";
-};
+export { Gmailit } from "./gmailit";
+export { ErrorResponse } from "./interfaces";
