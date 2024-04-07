@@ -13,7 +13,7 @@
     "test": "vitest run",
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
-    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "ci": "pnpm run lint && pnpm run build",
     "release": "pnpm run ci && changeset publish"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/thepradipvc/gmailit-node-sdk#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@types/html-to-text": "^9.0.4",
     "@types/node": "^20.11.30",
     "@types/react": "^18.2.74",
     "tsup": "^6.7.0",

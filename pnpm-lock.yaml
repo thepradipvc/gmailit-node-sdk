@@ -13,6 +13,9 @@ devDependencies:
   '@changesets/cli':
     specifier: ^2.27.1
     version: 2.27.1
+  '@types/html-to-text':
+    specifier: ^9.0.4
+    version: 9.0.4
   '@types/node':
     specifier: ^20.11.30
     version: 20.11.30
@@ -874,6 +877,10 @@ packages:
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+    dev: true
+
+  /@types/html-to-text@9.0.4:
+    resolution: {integrity: sha512-pUY3cKH/Nm2yYrEmDlPR1mR7yszjGx4DrwPjQ702C4/D5CwHuZTgZdIdwPkRbcuhs7BAh2L5rg3CL5cbRiGTCQ==}
     dev: true
 
   /@types/minimist@1.2.5:
