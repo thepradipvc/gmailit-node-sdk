@@ -1,7 +1,7 @@
 {
-  "name": "gmailit",
+  "name": "thundermail",
   "version": "1.0.0",
-  "description": "Node.js library for the Gmailit API",
+  "description": "Node.js library for the Thunder Mail API",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thepradipvc/gmailit-node-sdk"
+    "url": "https://github.com/thepradipvc/thundermail-node-sdk"
   },
   "author": "Pradip Chaudhary",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thepradipvc/gmailit-node-sdk/issues"
+    "url": "https://github.com/thepradipvc/thundermailnode-sdk/issues"
   },
-  "homepage": "https://github.com/thepradipvc/gmailit-node-sdk#readme",
+  "homepage": "https://github.com/thepradipvc/thundermail-node-sdk#readme",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@types/html-to-text": "^9.0.4",

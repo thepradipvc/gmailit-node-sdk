@@ -1,14 +1,14 @@
 import { Emails } from "./emails/emails";
-import { isGmailitErrorResponse } from "./error";
+import { isThunderMailErrorResponse } from "./error";
 import { ErrorResponse, GetOptions, PostOptions } from "./interfaces";
 
-const defaultBaseUrl = "https://gmailit.vercel.app/api/v1";
+const defaultBaseUrl = "https://thundermail.vercel.app/api/v1";
 const baseUrl =
   typeof process !== "undefined" && process.env
     ? process.env.RESEND_BASE_URL || defaultBaseUrl
     : defaultBaseUrl;
 
-export class Gmailit {
+export class ThunderMail {
   private readonly headers: Headers;
   readonly emails = new Emails(this);
 
@@ -20,7 +20,7 @@ export class Gmailit {
 
       if (!this.key) {
         throw new Error(
-          'Missing API key. Pass it to the constructor `new Gmailit("git_123")`'
+          'Missing API key. Pass it to the constructor `new ThunderMail("tim_123")`'
         );
       }
     }
@@ -45,7 +45,7 @@ export class Gmailit {
 
       try {
         error = await response.json();
-        if (isGmailitErrorResponse(error)) {
+        if (isThunderMailErrorResponse(error)) {
           return { data: null, error };
         }
 

@@ -1,6 +1,6 @@
-import { ErrorResponse, GMAILIT_ERROR_CODE_KEY } from "./interfaces";
+import { ErrorResponse, THUNDERMAIL_ERROR_CODE_KEY } from "./interfaces";
 
-export const isGmailitErrorResponse = (
+export const isThunderMailErrorResponse = (
   response: unknown
 ): response is ErrorResponse => {
   if (typeof response !== "object" || response === null) {
@@ -18,10 +18,10 @@ export const isGmailitErrorResponse = (
   return typeof message === "string" && typeof name === "string";
 };
 
-export class GmailitError extends Error {
-  public readonly name: GMAILIT_ERROR_CODE_KEY;
+export class ThunderMailError extends Error {
+  public readonly name: THUNDERMAIL_ERROR_CODE_KEY;
 
-  public constructor(message: string, name: GMAILIT_ERROR_CODE_KEY) {
+  public constructor(message: string, name: THUNDERMAIL_ERROR_CODE_KEY) {
     super();
     this.message = message;
     this.name = name;
@@ -29,7 +29,7 @@ export class GmailitError extends Error {
 
   public static fromResponse(response: ErrorResponse) {
     const error = response;
-    return new GmailitError(error.message, error.name);
+    return new ThunderMailError(error.message, error.name);
   }
 
   public override toString() {

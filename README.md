@@ -1,15 +1,15 @@
-# Gmailit Node.js SDK
+# Thunder Mail Node.js SDK
 
-Node.js library for the Gmailit API.
+Node.js library for the Thunder Mail API.
 
 ## Install
 
 ```bash
-npm install gmailit
+npm install thundermail
 # or
-yarn add gmailit
+yarn add thundermail
 # or
-pnpm add gmailit
+pnpm add thundermail
 ```
 
 ## Examples
@@ -17,18 +17,18 @@ pnpm add gmailit
 coming soon
 <!-- Send email with:
 
-- [Node.js](https://github.com/gmailitlabs/gmailit-node-example)
-- [Next.js (App Router)](https://github.com/gmailitlabs/gmailit-nextjs-app-router-example)
-- [Next.js (Pages Router)](https://github.com/gmailitlabs/gmailit-nextjs-pages-router-example)
-- [Express](https://github.com/gmailitlabs/gmailit-express-example) -->
+- [Node.js](https://github.com/thundermaillabs/thundermail-node-example)
+- [Next.js (App Router)](https://github.com/thundermaillabs/thundermail-nextjs-app-router-example)
+- [Next.js (Pages Router)](https://github.com/thundermaillabs/thundermail-nextjs-pages-router-example)
+- [Express](https://github.com/thundermaillabs/thundermail-express-example) -->
 
 ## Setup
 
-First, you need to get an API key, which is available in the [gmailit Dashboard](https://gmailit.com/dashboard).
+First, you need to get an API key, which is available in the [Thunder Mail Dashboard](https://thundermail.vercel.app/dashboard).
 
 ```js
-import { Gmailit } from 'gmailit';
-const gmailit = new Gmailit('re_123456789');
+import { ThunderMail } from 'thundermail';
+const thundermail = new ThunderMail('tim_12345678');
 ```
 
 ## Usage
@@ -36,7 +36,7 @@ const gmailit = new Gmailit('re_123456789');
 Send your first email:
 
 ```js
-await gmailit.emails.send({
+await thundermail.emails.send({
   from: 'you@example.com',
   to: 'user@gmail.com',
   subject: 'hello world',
@@ -49,7 +49,7 @@ await gmailit.emails.send({
 Send an email custom HTML content:
 
 ```js
-await gmailit.emails.send({
+await thundermail.emails.send({
   from: 'you@example.com',
   to: 'user@gmail.com',
   subject: 'hello world',
@@ -81,7 +81,7 @@ Then import the template component and pass it to the `react` property.
 ```jsx
 import EmailTemplate from '../components/EmailTemplate';
 
-await gmailit.emails.send({
+await thundermail.emails.send({
   from: 'you@example.com',
   to: 'user@gmail.com',
   subject: 'hello world',

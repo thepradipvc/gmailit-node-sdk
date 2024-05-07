@@ -1,2 +1,2 @@
-export { Gmailit } from "./gmailit";
+export { ThunderMail } from "./thundermail";
 export { ErrorResponse } from "./interfaces";

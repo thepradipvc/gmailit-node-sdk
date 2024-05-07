@@ -1,4 +1,4 @@
-export const GMAILIT_ERROR_CODES_BY_KEY = {
+export const THUNDERMAIL_ERROR_CODES_BY_KEY = {
   missing_required_field: 422,
   // invalid_access: 422,
   // invalid_parameter: 422,
@@ -14,11 +14,12 @@ export const GMAILIT_ERROR_CODES_BY_KEY = {
   internal_server_error: 500,
 } as const;
 
-export type GMAILIT_ERROR_CODE_KEY = keyof typeof GMAILIT_ERROR_CODES_BY_KEY;
+export type THUNDERMAIL_ERROR_CODE_KEY =
+  keyof typeof THUNDERMAIL_ERROR_CODES_BY_KEY;
 
 export interface ErrorResponse {
   message: string;
-  name: GMAILIT_ERROR_CODE_KEY;
+  name: THUNDERMAIL_ERROR_CODE_KEY;
 }
 
 export type Tag = { name: string; value: string };

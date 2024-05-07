@@ -1,6 +1,6 @@
 import { renderAsync } from "@react-email/render";
 import * as React from "react";
-import { Gmailit } from "../gmailit";
+import { ThunderMail } from "../thundermail";
 import {
   CreateEmailOptions,
   CreateEmailRequestOptions,
@@ -11,7 +11,7 @@ import {
 } from "./interfaces";
 
 export class Emails {
-  constructor(private readonly gmailit: Gmailit) {}
+  constructor(private readonly thundermail: ThunderMail) {}
 
   async send(
     payload: CreateEmailOptions,
@@ -29,7 +29,7 @@ export class Emails {
       delete payload.react;
     }
 
-    const data = await this.gmailit.post<CreateEmailResponseSuccess>(
+    const data = await this.thundermail.post<CreateEmailResponseSuccess>(
       "/emails",
       payload,
       options
@@ -39,7 +39,7 @@ export class Emails {
   }
 
   async get(id: string): Promise<GetEmailResponse> {
-    const data = await this.gmailit.get<GetEmailResponseSuccess>(
+    const data = await this.thundermail.get<GetEmailResponseSuccess>(
       `/emails/${id}`
     );
     return data;
